@@ -9,7 +9,7 @@ shared:
   # "repo_name:tag_label".
   #
   # (Source: https://hub.docker.com/r/library/buildpack-deps/)
-  image: buildpack-deps
+  image: gradle:jdk11
 jobs:
   # Jobs are defined by name.
   # All pipelines have "main" implicitly defined. The definitions in your
@@ -22,7 +22,7 @@ jobs:
     # Jobs defined with "requires: main" are started after "main" is done.
     # Jobs defined with "requires: [deploy-west, deploy-east] are started after "deploy-west" and "deploy-east" are both done running successfully.
     requires: [~pr, ~commit]
-    image: gradle:jdk11
+
     # Steps is the list of commands to execute.
     steps:
       # Each step takes the form "step_name: command_to_run".
