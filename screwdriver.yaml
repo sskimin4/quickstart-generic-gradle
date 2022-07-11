@@ -30,6 +30,6 @@ jobs:
       # step. Environment variables will be passed between steps, within
       # the same job (as shown below).
       - export: |
-          cd testGralde
+          cd testGradle
           ./gradlew dependencies
 
